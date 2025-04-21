@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SharedUiComponent } from './shared-ui.component';
+import { AxeOsThemeComponent } from './axe-os-theme.component';
 
-describe('SharedUiComponent', () => {
-  let component: SharedUiComponent;
-  let fixture: ComponentFixture<SharedUiComponent>;
+describe('AxeOsThemeComponent', () => {
+  let component: AxeOsThemeComponent;
+  let fixture: ComponentFixture<AxeOsThemeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SharedUiComponent]
+      imports: [AxeOsThemeComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SharedUiComponent);
+    fixture = TestBed.createComponent(AxeOsThemeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
