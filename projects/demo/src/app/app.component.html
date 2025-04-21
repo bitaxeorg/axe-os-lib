@@ -1,7 +1,9 @@
 <lib-axe-os-theme>
     <lib-app-layout>
         <div app-header>Test Header</div>
-        <div app-sidebar>Test Sidebar</div>
+        <div app-sidebar>
+            <lib-app-menu [model]="menuItems"></lib-app-menu>
+        </div>
         My ng-content
         <div app-footer>My Footer</div>
     </lib-app-layout>
