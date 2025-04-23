@@ -1,6 +1,8 @@
 <div class="layout-wrapper" [ngClass]="containerClass">
-    <ng-content select="[app-header]"></ng-content>
-    <div class="layout-sidebar">
+    <div #appTopbar>
+        <ng-content select="[app-header]"></ng-content>
+    </div>
+    <div #appSidebar class="layout-sidebar">
         <ng-content select="[app-sidebar]"></ng-content>
     </div>
     <div class="layout-main-container">

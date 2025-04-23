@@ -6,7 +6,7 @@ import { LayoutService } from '../services/layout.service';
 @Component({
   selector: '[lib-app-menu-item]',
   imports: [CommonModule, RouterModule],
-  providers:[LayoutService, Router],
+  providers:[Router],
   templateUrl: './app-menu-item.component.html',
   styleUrl: './app-menu-item.component.scss'
 })
@@ -21,7 +21,7 @@ export class AppMenuItemComponent implements OnInit {
 
   key: string = "";
 
-  constructor(public layoutService: LayoutService, public router: Router,) {
+  constructor(public layoutService: LayoutService, public router: Router) {
   }
 
   ngOnInit() {

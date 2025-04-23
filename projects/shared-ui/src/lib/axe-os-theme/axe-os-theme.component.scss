@@ -21,7 +21,7 @@
 @import "../../layout/styles/theme/themes/vela/bitaxe/theme.scss";
 
 @import "primeicons/primeicons.css";
-@import "primeng/resources/primeng.min.css";
+
 @import "primeflex/primeflex.min.css";
 
 
@@ -35,4 +35,19 @@ p-chart>div {
     &.chart {
         padding: 10px;
     }
+}
+
+.p-link {
+    text-align: left;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none
+}
+
+.p-link:disabled {
+    cursor: default
 }
