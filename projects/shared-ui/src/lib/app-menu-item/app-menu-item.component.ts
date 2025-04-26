@@ -2,13 +2,21 @@ import { CommonModule } from '@angular/common';
 import { Component, HostBinding, Input, OnDestroy, OnInit } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { LayoutService } from '../services/layout.service';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
   selector: '[lib-app-menu-item]',
   imports: [CommonModule, RouterModule],
   providers:[Router],
   templateUrl: './app-menu-item.component.html',
-  styleUrl: './app-menu-item.component.scss'
+  styleUrl: './app-menu-item.component.scss',
+  animations: [
+    trigger('children', [
+      state('void', style({ height: '0px', opacity: 0, overflow: 'hidden' })),
+      state('*', style({ height: '*', opacity: 1, overflow: 'hidden' })),
+      transition('void <=> *', animate('200ms ease-in-out')),
+    ]),
+  ]
 })
 export class AppMenuItemComponent implements OnInit {
 
