@@ -8,6 +8,7 @@
 
 # Node
 /node_modules
+/projects/shared-ui/node_modules
 npm-debug.log
 yarn-error.log
 

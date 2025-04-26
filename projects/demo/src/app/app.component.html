@@ -1,21 +1,10 @@
 <lib-axe-os-theme>
     <lib-app-layout>
         <div app-header>
-            <div class="layout-topbar">
-                <a class="layout-topbar-logo" routerLink="">
-                    <div [routerLink]="['/']" class="header-text"><span style="font-family: Angel Wish; font-size: 4rem;">Axe</span><span class="os" style=" font-size: 3rem;">OS</span></div>
-                </a>
-            
-                <button #menubutton class="p-link layout-menu-button layout-topbar-button" (click)="toggleSidebar($event)">
-                    <i class="pi pi-bars"></i>
-                </button>
-            
-            
-                <div class="layout-topbar-menu">
-            
-                </div>
-            
-            </div>
+            <lib-app-top-bar>
+                <ng-container top-bar-angel>Axe</ng-container> 
+                <ng-container top-bar-header>OS</ng-container>
+            </lib-app-top-bar>
         </div>
         <div app-sidebar>
             <lib-app-menu [model]="menuItems"></lib-app-menu>
@@ -37,6 +26,9 @@
                                 <span class="text-500"> expected</span>
                             </ng-container>
                         </div>
+                    </div>
+                    <div class="col-12">
+                        <button pButton>Automatic Scan</button>
                     </div>
                 </div>
             </div>

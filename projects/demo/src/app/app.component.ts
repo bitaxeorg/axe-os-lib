@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
-import {AxeOsThemeComponent, AppLayoutComponent, AppMenuComponent, LayoutService } from 'shared-ui';
+import {AxeOsThemeComponent, AppLayoutComponent, AppMenuComponent, AppTopBarComponent } from 'shared-ui';
+import {ButtonModule} from 'primeng/button';
 
 @Component({
   selector: 'app-root',
-  imports: [AxeOsThemeComponent, AppLayoutComponent, AppMenuComponent, RouterModule],
+  imports: [AxeOsThemeComponent, AppLayoutComponent, AppMenuComponent, AppTopBarComponent, RouterModule, ButtonModule],
   providers:[],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
@@ -28,12 +29,9 @@ export class AppComponent {
       }
   ];
 
-  constructor(public layoutService: LayoutService){
+  constructor(){
 
   }
 
-  public toggleSidebar($event: Event){
-    $event.stopImmediatePropagation();
-    this.layoutService.onMenuToggle();
-  }
+
 }
