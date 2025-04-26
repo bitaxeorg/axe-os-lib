@@ -6,6 +6,9 @@ export function providePrimeNGTheme() {
   return providePrimeNG({
     theme: {
       preset: BitaxeRedPreset,
+      options:{
+        darkModeSelector: '.dark-mode'
+      }
     },
   });
 }

@@ -2,16 +2,21 @@ import { Component } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import {AxeOsThemeComponent, AppLayoutComponent, AppMenuComponent, AppTopBarComponent } from 'shared-ui';
 import {ButtonModule} from 'primeng/button';
+import {FormBuilder, FormGroup, ReactiveFormsModule} from '@angular/forms'
+import {InputTextModule} from 'primeng/inputtext'
+import {InputGroupModule} from 'primeng/inputgroup'
 
 @Component({
   selector: 'app-root',
-  imports: [AxeOsThemeComponent, AppLayoutComponent, AppMenuComponent, AppTopBarComponent, RouterModule, ButtonModule],
-  providers:[],
+  imports: [AxeOsThemeComponent, AppLayoutComponent, AppMenuComponent, AppTopBarComponent, RouterModule, ButtonModule, ReactiveFormsModule, InputTextModule, InputGroupModule],
+  providers:[FormBuilder],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'demo';
+
+  public form: FormGroup;
 
   public menuItems = [
       {
@@ -29,9 +34,11 @@ export class AppComponent {
       }
   ];
 
-  constructor(){
-
+  constructor(private fb: FormBuilder){
+    this.form = this.fb.group({});
   }
 
-
+  public add(){
+    
+  }
 }
